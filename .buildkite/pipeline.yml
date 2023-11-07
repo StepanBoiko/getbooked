@@ -1,8 +1,7 @@
 steps:
-  - label: ":pipeline:"
+  - label: ":terraform:"
     command: echo hello
 
 
 
 
-    
