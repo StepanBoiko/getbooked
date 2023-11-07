@@ -1,7 +1,3 @@
 steps:
   - label: ":pipeline:"
-<<<<<<< HEAD
     command: echo hello
-=======
-    command: buildkite-agent pipeline upload
->>>>>>> origin/master
