@@ -1,4 +1,5 @@
 steps:
   - label: ":pipeline:"
     command: echo hello
+    command: echo hello
     
