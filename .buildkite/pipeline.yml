@@ -1,4 +1,3 @@
 steps:
-  - label: ":pipeline:"
-    command: echo hello
-    
+  - label: ":rails: Test"
+    echo: hello men
