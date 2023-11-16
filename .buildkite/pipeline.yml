@@ -1,18 +1,19 @@
 steps:
-  - label: ":ruby: Test"
-    command: "rails test"  # Replace with your test command
-    
-  - wait
+  - label: ":rails: Install Dependencies"
+    command: "bundle install"
+    agents:
+      queue: "rails"
 
-  - label: ":webpack: Build assets"
-    command: "bin/webpack"  # Replace with your asset build command
-    plugins:
-      - docker#v3.5.0:
-          image: "node:14"  # Use the desired Node.js version
-          always-pull: true
+  - label: ":rails: Database Setup"
+    command: "bin/rails db:create db:schema:load"
+    agents:
+      queue: "rails"
 
-  - wait
-
+  - label: ":rails: Run Tests"
+    command: "bin/rails test"
+    agents:
+      queue: "rails"
+      
   - label: ":rails: Deploy"
     command: "bin/deploy"  # Replace with your deployment script
     branches: "main"
