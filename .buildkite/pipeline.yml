@@ -1,3 +1,20 @@
 steps:
-  - label: ":pipeline"
-    command: echo "meeeeewww"
+  - label: ":ruby: Test"
+    command: "rails test"  # Replace with your test command
+    
+  - wait
+
+  - label: ":webpack: Build assets"
+    command: "bin/webpack"  # Replace with your asset build command
+    plugins:
+      - docker#v3.5.0:
+          image: "node:14"  # Use the desired Node.js version
+          always-pull: true
+
+  - wait
+
+  - label: ":rails: Deploy"
+    command: "bin/deploy"  # Replace with your deployment script
+    branches: "main"
+    agents:
+      queue: "deploy"
