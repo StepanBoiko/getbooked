@@ -1,5 +1,6 @@
 steps:
   - label: ":rails: Install Dependencies"
+    command: "cd app"
     command: "bundle install"
     agents:
       queue: "rails"
