@@ -8,11 +8,10 @@ steps:
       ls -la
       unzip master.zip
       ls -la
-
-  - label: ":ruby: Install Dependencies"
-    command: |
-      pwd
+      cd getbooked-master/app
       bundle install
+
+  
 
   - label: ":rails: Database Setup"
     command: |
