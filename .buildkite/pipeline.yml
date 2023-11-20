@@ -2,7 +2,10 @@
 
 steps:
   - label: ":ruby: Install Dependencies"
-    command: "bundle install"
+    commands: 
+      - ls -la
+      - cd app
+      - bundle install
     agents:
       queue: "rails"
 
