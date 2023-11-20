@@ -5,8 +5,7 @@ steps:
     command:  "cd test"
     command:  "wget https://github.com/StepanBoiko/getbooked/archive/refs/heads/master.zip"
     command:  "unzip master.zip"
-    command:  "cd"
-    command:  "cd tets/getbooked-master/app"
+    command:  "cd getbooked-master/app"
 
   - label: ":env folder: Install Dependencies"
     command:  "ls -la"
