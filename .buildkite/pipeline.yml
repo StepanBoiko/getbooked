@@ -1,15 +1,19 @@
 steps:
   - label: ":env: Getting repo"
-    command:  "rm -rf test"
-    command:  "mkdir test"
-    command:  "cd test"
-    command:  "wget https://github.com/StepanBoiko/getbooked/archive/refs/heads/master.zip"
-    command:  "unzip master.zip"
-    command:  "cd getbooked-master/app"
+    command: |
+      rm -rf test
+      mkdir test
+      cd test
+      wget https://github.com/StepanBoiko/getbooked/archive/refs/heads/master.zip
+      unzip master.zip
+      cd
+      cd test/getbooked-master/app
 
-  - label: ":env folder: Install Dependencies"
-    command:  "ls -la"
-    command:  "bundle install"
+  - label: ":ruby: Install Dependencies"
+    command: |
+      ls -la
+      pwd
+      bundle install
 
   - label: ":rails: Database Setup"
     command: |
