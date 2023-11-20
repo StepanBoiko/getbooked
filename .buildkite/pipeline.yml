@@ -6,7 +6,7 @@ steps:
       cd test
       wget https://github.com/StepanBoiko/getbooked/archive/refs/heads/master.zip
       unzip master.zip
-      cd getbooked-master/app
+      cd getbooked-master/app/
 
   - label: ":ruby: Install Dependencies"
     command: |
