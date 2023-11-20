@@ -5,7 +5,7 @@ steps:
     commands: 
       - ls -la
       - cd app
-      - bundle install
+      - bundle install --jobs=6
     agents:
       queue: "rails"
 
