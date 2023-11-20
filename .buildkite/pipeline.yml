@@ -9,7 +9,8 @@ steps:
       unzip master.zip
       ls -la
       cd getbooked-master/app
-      sudo bundle install
+      sudo bundle install --no-deployment --no-test --without development test
+
 
   
 
