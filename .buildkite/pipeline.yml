@@ -10,6 +10,7 @@ steps:
 
   - label: ":ruby: Install Dependencies"
     command: |
+      cd test/getbooked-master/app
       bundle install
 
   - label: ":rails: Database Setup"
