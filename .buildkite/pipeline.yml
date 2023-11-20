@@ -13,8 +13,8 @@ steps:
       - command curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
       - \curl -sSL https://get.rvm.io | bash -s stable
       - ruby -v
-      - gem install rails --no-document
-      - rails -v
+      # - gem install rails --no-document
+      # - rails -v
       - bundle install
     
 
