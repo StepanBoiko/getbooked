@@ -5,6 +5,8 @@ steps:
     commands: 
       - ls -la
       - cd app
+      - rails -v
+      - ruby -v
       - bundle install
     
 
