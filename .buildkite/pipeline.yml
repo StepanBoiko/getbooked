@@ -1,22 +1,19 @@
 # .buildkite/pipeline.yml
 
 steps:
-  - label: ":ruby: Install Dependencies"
+  - label: ":env: Install Dependencies"
     commands: 
       - ls -la
       - cd app
       - bundle install
-    agents:
-      queue: "rails"
+    
 
   - label: ":ruby: Database Setup"
     commands: 
       - rails db:create 
       - rails db:migrate
-    agents:
-      queue: "rails"
+    
 
   - label: ":rails: Run Tests"
     command: "rails test"
-    agents:
-      queue: "rails"
+    
