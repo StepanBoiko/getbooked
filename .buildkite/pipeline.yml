@@ -15,7 +15,7 @@ steps:
       - ruby -v
       # - gem install rails --no-document
       # - rails -v
-      - bundle install
+      # - bundle install
     
 
   - label: ":ruby: Database Setup"
