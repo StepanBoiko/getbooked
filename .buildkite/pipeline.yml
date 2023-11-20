@@ -1,22 +1,27 @@
 steps:
-  - label: ":rails: Install Dependencies"
-    command: "cd app"
-    command: "bundle install"
-    agents:
-      queue: "rails"
+  - label: ":ruby: Install Dependencies"
+    command: |
+      bundle install
 
   - label: ":rails: Database Setup"
-    command: "bin/rails db:create db:schema:load"
-    agents:
-      queue: "rails"
+    command: |
+      rails db:create
+      rails db:migrate
 
-  - label: ":rails: Run Tests"
-    command: "bin/rails test"
-    agents:
-      queue: "rails"
-      
-  - label: ":rails: Deploy"
-    command: "bin/deploy"  # Replace with your deployment script
-    branches: "main"
-    agents:
-      queue: "deploy"
+  - wait
+
+  - label: ":rspec: Run Tests"
+    command: |
+      rails test
+
+  - wait
+
+  - label: ":deploy: Deploy to Production"
+    command: |
+      # Add deployment commands here
+      # For example:
+      # - Copy files to the production server
+      # - Run migrations on the production database
+      # - Restart the application server
+
+# You can define more steps for deployment to different environments (staging, etc.)
