@@ -5,11 +5,12 @@ steps:
       mkdir test
       cd test
       wget https://github.com/StepanBoiko/getbooked/archive/refs/heads/master.zip
+      ls -la
       unzip master.zip
+      ls -la
 
   - label: ":ruby: Install Dependencies"
     command: |
-      ls -la
       pwd
       bundle install
 
