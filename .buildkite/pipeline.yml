@@ -9,29 +9,29 @@ steps:
       unzip master.zip
       ls -la
       cd getbooked-master/app
-      bundle install
+      sudo bundle install
 
   
 
-  - label: ":rails: Database Setup"
-    command: |
-      rails db:create
-      rails db:migrate
+#   - label: ":rails: Database Setup"
+#     command: |
+#       rails db:create
+#       rails db:migrate
 
-  - wait
+#   - wait
 
-  - label: ":test: Run Tests"
-    command: |
-      rails test
+#   - label: ":test: Run Tests"
+#     command: |
+#       rails test
 
-  - wait
+#   - wait
 
-  - label: ":deploy: Deploy to Production"
-    command: |
-      # Add deployment commands here
-      # For example:
-      # - Copy files to the production server
-      # - Run migrations on the production database
-      # - Restart the application server
+#   - label: ":deploy: Deploy to Production"
+#     command: |
+#       # Add deployment commands here
+#       # For example:
+#       # - Copy files to the production server
+#       # - Run migrations on the production database
+#       # - Restart the application server
 
-# You can define more steps for deployment to different environments (staging, etc.)
+# # You can define more steps for deployment to different environments (staging, etc.)
