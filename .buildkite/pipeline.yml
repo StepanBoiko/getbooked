@@ -8,6 +8,7 @@ steps:
       ls -la
       unzip master.zip
       ls -la
+      cd
       sudo yum install -y nodejs
       sudo yum groupinstall "Development Tools" -y
       sudo yum install openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel -y
