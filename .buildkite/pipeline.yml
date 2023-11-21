@@ -5,16 +5,16 @@ steps:
     commands: 
       - ls -la
       - cd app
-      - sudo yum install -y nodejs
-      - sudo yum groupinstall "Development Tools" -y
-      - sudo yum install openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel -y
-      - sudo yum install -y gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison sqlite-devel -y
-      - command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
-      - command curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
-      - \curl -sSL https://get.rvm.io | bash -s stable
-      - ruby -v
-      - sudo gem install rails --no-document
-      - rails -v
+      # - sudo yum install -y nodejs
+      # - sudo yum groupinstall "Development Tools" -y
+      # - sudo yum install openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel -y
+      # - sudo yum install -y gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison sqlite-devel -y
+      # - command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+      # - command curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
+      # - \curl -sSL https://get.rvm.io | bash -s stable
+      # - ruby -v
+      # - sudo gem install rails --no-document
+      # - rails -v
       - sudo bundle install
     
 
