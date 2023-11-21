@@ -5,7 +5,7 @@ steps:
     commands: 
       - ls -la
       - cd app
-      - su - buildkite-agent
+      - ./switchuser.sh
       - cd /var/lib/buildkite-agent/builds/ip-172-31-43-15-ec2-internal-1/company-1/getbookedcicd/app
       # - sudo yum install -y nodejs
       # - sudo yum groupinstall "Development Tools" -y
