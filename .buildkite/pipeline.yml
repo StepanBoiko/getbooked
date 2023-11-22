@@ -23,7 +23,7 @@ steps:
 
   - label: ":ruby: Database Setup"
     commands: 
-      - cd /var/lib/buildkite-agent/builds/ip-172-31-43-15-ec2-internal-1/company-1/getbookedcicd/app
+      - cd /var/lib/buildkite-agent/builds/ip-172-31-23-159-ec2-internal-1/company-1/getbookedcicd/app
       - bundle install
       - rails db:create 
       - rails db:migrate
@@ -31,7 +31,7 @@ steps:
 
   - label: ":rails: Run Tests"
     commands: 
-      - cd /var/lib/buildkite-agent/builds/ip-172-31-43-15-ec2-internal-1/company-1/getbookedcicd/app
+      - cd /var/lib/buildkite-agent/builds/ip-172-31-23-159-ec2-internal-1/company-1/getbookedcicd/app
       - rails test
 
 
