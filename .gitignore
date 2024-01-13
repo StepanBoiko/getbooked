@@ -1,4 +1,4 @@
 # Project exclude paths
 /app/log/
-/app/terraform/.terraform
+app/terraform/.terraform
 
