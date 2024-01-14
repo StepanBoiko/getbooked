@@ -10,8 +10,7 @@ steps:
   - label: ":ruby: Database Setup"
     commands: 
       - rails db:create 
-      - rails db:migrate
-    
+      - rails db:migrate    
 
   - label: ":rails: Run Tests"
     commands: 

@@ -2,7 +2,6 @@
 
 echo "Deploying to Staging..."
 
-
 APP_DIR="/path/to/your/app"
 RAILS_ENV="staging"
 
