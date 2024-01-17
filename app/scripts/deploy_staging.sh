@@ -9,6 +9,7 @@ REPO_URL="https://github.com/StepanBoiko/getbooked.git"
 BRANCH="master"
 
 # Clone or pull the latest code from the repository
+ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} "echo "Deploying to Staging...""
 ssh ${REMOTE_USER}@${REMOTE_HOST} "mkdir remotetestdir"
 ssh ${REMOTE_USER}@${REMOTE_HOST} "cd remotetestdir"
 ssh ${REMOTE_USER}@${REMOTE_HOST} "git clone https://github.com/StepanBoiko/getbooked.git"
