@@ -21,12 +21,12 @@ steps:
       - cd /var/lib/buildkite-agent/builds/ip-172-31-23-159-ec2-internal-1/company-1/getbookedcicd/app
       - rails test
 
-  # - wait
+  - wait
 
-  # - label: ":rails: Deploy"
-  #     commands: 
-  #       - cd /var/lib/buildkite-agent/builds/ip-172-31-23-159-ec2-internal-1/company-1/getbookedcicd/app/scripts
-  #       - bash deploy_staging.sh
+  - label: ":rocket: Deploy to Staging"
+      commands: 
+        - cd /var/lib/buildkite-agent/builds/ip-172-31-23-159-ec2-internal-1/company-1/getbookedcicd/app/scripts
+        - bash deploy_staging.sh
 
     
 # cd /var/lib/buildkite-agent/builds/ip-172-31-39-37-ec2-internal-1/company-1/getbookedcicd/
