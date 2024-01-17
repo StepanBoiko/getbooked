@@ -10,7 +10,7 @@ BRANCH="master"
 
 # Clone or pull the latest code from the repository
 ssh ${REMOTE_USER}@${REMOTE_HOST} "mkdir remotetestdir"
-ssh ${REMOTE_USER}@${REMOTE_HOST} "cd temotetestdir"
+ssh ${REMOTE_USER}@${REMOTE_HOST} "cd remotetestdir"
 ssh ${REMOTE_USER}@${REMOTE_HOST} "git clone https://github.com/StepanBoiko/getbooked.git"
 # ssh ${REMOTE_USER}@${REMOTE_HOST} "git clone ${REPO_URL} -b ${BRANCH} --single-branch --depth 1 ${APP_NAME} || (cd ${APP_NAME} && git pull)"
 
