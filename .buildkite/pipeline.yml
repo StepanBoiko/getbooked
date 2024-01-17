@@ -7,17 +7,23 @@ steps:
       - cd /var/lib/buildkite-agent/builds/ip-172-31-23-159-ec2-internal-1/company-1/getbookedcicd/app
       - bundle install
 
+  - wait
+
   - label: ":ruby: Database Setup"
     commands: 
       - rails db:create 
       - rails db:migrate    
+
+  - wait
 
   - label: ":rails: Run Tests"
     commands: 
       - cd /var/lib/buildkite-agent/builds/ip-172-31-23-159-ec2-internal-1/company-1/getbookedcicd/app
       - rails test
 
-  - label: ":deploy to staging"
+  - wait
+
+  - label: "Deploy"
       commands: 
         - cd /var/lib/buildkite-agent/builds/ip-172-31-23-159-ec2-internal-1/company-1/getbookedcicd/app/scripts
         - bash deploy_staging.sh
