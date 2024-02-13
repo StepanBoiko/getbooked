@@ -5,6 +5,7 @@ echo "Deploying to Staging..."
 APP_NAME="getbooked"
 REMOTE_USER="ec2-user"
 REMOTE_HOST="44.199.170.53"
+EC2_INSTANCE_KEY="getBookedKey.pem"
 REPO_URL="https://github.com/StepanBoiko/getbooked.git"
 BRANCH="master"
 
